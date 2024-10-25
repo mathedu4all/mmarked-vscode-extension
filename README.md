@@ -1,71 +1,53 @@
-# mmarked README
+# vscode-mmarked-extenstion
 
-This is the README for your extension "mmarked". After writing up a brief description, we recommend including the following sections.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Features
+## 🌟 Introduction
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The **mmarked** is a Visual Studio Code extension that provides real-time previews of Markdown files with enhanced LaTeX support using the [**mmarked**](https://lab.mathcrowd.cn/mmarked) library. 
 
-For example if there is an image subfolder under your extension project workspace:
+This extension is designed for educators, students, and anyone who needs to visualize mathematical expressions and custom Markdown syntax in their documentation.
 
-\!\[feature X\]\(images/feature-x.png\)
+## 📦 Features
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- ✅ Full CommonMark syntax support: Comprehensive compatibility with CommonMark standards.
+- 🔢 Footnotes Blocks: Supports rendering auto-numbered footnotes with easy reference links.
+- 📘 Theorem-like blocks: Supports rendering mathematical theorems, lemmas, and examples in a block format with titles, auto-numbering, and reference links.
+- 🖼️ Image resizing capabilities: Allows for customizable rendering of images and videos using simple syntax.
+- 🔍 Hidden/show solution blocks: Provides a solution block with a toggle button for easy visibility control, implemented with straightforward syntax.
+- 🧮 TeX to SVG conversion: Converts TeX equations to scalable vector graphics for high-quality rendering.
+- 🔗 Easy Integration with Existing Systems: Supports both server-side and browser-side implementations for flexible use.
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 🚀 Quick Start
 
-## Extension Settings
+### Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Open Visual Studio Code.
+2. Go to the Extensions view (click on the Extensions icon in the sidebar or use the shortcut `Ctrl+Shift+X`).
+3. Search for **mmarked** in the search box.
+4. Click the Install button.
 
-For example:
+### Usage Example
 
-This extension contributes the following settings:
+To preview your Markdown document with LaTeX support:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Open a Markdown file (`.md`).
+2. Use the command palette (`Ctrl+Shift+P`) and select **Markdown Preview with mmarked**.
+3. Make edits to your Markdown file, and see changes reflected in real-time.
 
-## Known Issues
+## 👥 About Mathcrowd
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Mathcrowd is an innovative startup founded by experienced independent developers and mathematics educators. We're on a mission to revolutionize math education in China through cutting-edge technology. Our goal is to create an engaging online community for math enthusiasts and self-learners, offering rich, interactive, and visualized learning content.
 
-## Release Notes
+🌐 MCLab Official Website: [https://lab.mathcrowd.cn](https://lab.mathcrowd.cn) 
 
-Users appreciate release notes as you update your extension.
+🌐 Our Online Math Community: [https://www.mathcrowd.cn](https://www.mathcrowd.cn) 
 
-### 1.0.0
+## 🤝 Contributing
 
-Initial release of ...
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
-### 1.0.1
+## 📞 Support
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+For any questions or issues, please [open an issue](https://github.com/mathedu4all/mmarked-vscode-extension/issues) on our GitHub repository.

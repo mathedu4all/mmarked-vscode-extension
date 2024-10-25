@@ -1,26 +1,64 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { renderMarkdown } from '@mathcrowd/mmarked';
+import path from 'path';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+    context.subscriptions.push(
+        vscode.commands.registerCommand('mmarked.previewMarkdown', () => {
+            const panel = vscode.window.createWebviewPanel(
+                'mmarkedPreview',
+                'Markdown Preview with mmarked',
+                vscode.ViewColumn.Two,
+                {
+                    enableScripts: true,
+                }
+            );
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "mmarked" is now active!');
+            // Get the active editor's content and render it
+            const editor = vscode.window.activeTextEditor;
+            if (editor) {
+                const content = editor.document.getText();
+                panel.webview.html = getWebviewContent(content,context, panel);
+            }
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('mmarked.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from MMarked!');
-	});
-
-	context.subscriptions.push(disposable);
+            // Update content when text changes
+            vscode.workspace.onDidChangeTextDocument((event) => {
+                if (event.document === editor?.document) {
+                    const content = event.document.getText();
+                    panel.webview.html = getWebviewContent(content,context,panel);
+                }
+            });
+        })
+    );
 }
 
-// This method is called when your extension is deactivated
+function getWebviewContent(content: string, context:vscode.ExtensionContext, panel:vscode.WebviewPanel ): string {
+    let parsed;
+    try {
+        const result = renderMarkdown(content);
+        parsed = result.parsed;
+    } catch (error) {
+        parsed = `<p>Error rendering Markdown: ${error.message}</p>`;
+    }
+	const myStyle = panel.webview.asWebviewUri(vscode.Uri.joinPath(
+        context.extensionUri, 'src','media', 'mathcrowd.css'));
+
+    return `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type="text/css" href="${myStyle}">
+            <title>Markdown Preview</title>
+        </head>
+        <body>
+			<section class="mmarked article-mmarked">
+				${parsed}
+			</section>
+        </body>
+        </html>
+    `;
+}
+
 export function deactivate() {}
