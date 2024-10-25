@@ -4,7 +4,7 @@
 
 ## 🌟 Introduction
 
-The **mmarked** is a Visual Studio Code extension that provides real-time previews of Markdown files with enhanced LaTeX support using the [**mmarked**](https://lab.mathcrowd.cn/mmarked) library. 
+The **MMarked** is a Visual Studio Code extension that provides real-time previews of Markdown files with enhanced LaTeX support using [@mathcrowd/mmarked](https://lab.mathcrowd.cn/mmarked). 
 
 This extension is designed for educators, students, and anyone who needs to visualize mathematical expressions and custom Markdown syntax in their documentation.
 
@@ -16,8 +16,8 @@ This extension is designed for educators, students, and anyone who needs to visu
 - 🖼️ Image resizing capabilities: Allows for customizable rendering of images and videos using simple syntax.
 - 🔍 Hidden/show solution blocks: Provides a solution block with a toggle button for easy visibility control, implemented with straightforward syntax.
 - 🧮 TeX to SVG conversion: Converts TeX equations to scalable vector graphics for high-quality rendering.
-- 🔗 Easy Integration with Existing Systems: Supports both server-side and browser-side implementations for flexible use.
-
+- 🌗 Dark/Light Theme CSS: Customizable theme support for dark and light modes to enhance readability and user experience.
+- ⚡ Real-Time Preview: Enables instant visual feedback while editing, making content creation and adjustments faster and more intuitive.
 
 ## 🚀 Quick Start
 
@@ -43,6 +43,8 @@ Mathcrowd is an innovative startup founded by experienced independent developers
 🌐 MCLab Official Website: [https://lab.mathcrowd.cn](https://lab.mathcrowd.cn) 
 
 🌐 Our Online Math Community: [https://www.mathcrowd.cn](https://www.mathcrowd.cn) 
+
+💬 Join Our Discord: https://discord.gg/6VMUVA5Yq2
 
 ## 🤝 Contributing
 
