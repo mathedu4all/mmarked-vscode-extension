@@ -2,7 +2,7 @@
   "name": "mmarked",
   "displayName": "MMarked",
   "description": "An alternative to the builtin markdown previewer based on @mathcrowd/mmarked.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.94.0"
