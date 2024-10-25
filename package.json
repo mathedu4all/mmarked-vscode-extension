@@ -6,8 +6,26 @@
   "engines": {
     "vscode": "^1.94.0"
   },
+  "homepage": "https://lab.mathcrowd.cn/mmarked",
   "categories": [
     "Other"
+  ],
+  "publisher": "MCLab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathedu4all/mmarked-vscode-extension.git"
+  },
+  "sponsor": {
+    "url": "https://www.mathcrowd.cn/crowd-funding/charging"
+  },
+  "pricing": "Free",
+  "keywords": [
+    "mmarked",
+    "markdown",
+    "markedjs",
+    "highlightjs",
+    "mathjax"
   ],
   "type": "commonjs",
   "main": "./out/extension.js",
@@ -22,7 +40,10 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "build": "vsce package",
+    "publish": "vsce publish",
+    "changelog": "git fetch && npx conventional-changelog -p angular -i CHANGELOG.md -s --release-count 0 && git add package.json CHANGELOG.md && git commit -m 'chore: package.json / CHANGELOG updated.'"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.9",

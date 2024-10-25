@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import { renderMarkdown } from '@mathcrowd/mmarked';
-import path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(
@@ -17,45 +16,49 @@ export function activate(context: vscode.ExtensionContext) {
             // Get the active editor's content and render it
             const editor = vscode.window.activeTextEditor;
             if (editor) {
-                const content = editor.document.getText();
-                panel.webview.html = getWebviewContent(content,context, panel);
+                updateWebviewContent(editor.document.getText(), panel);
             }
 
             // Update content when text changes
-            vscode.workspace.onDidChangeTextDocument((event) => {
+            const textChangeListener = vscode.workspace.onDidChangeTextDocument((event) => {
                 if (event.document === editor?.document) {
-                    const content = event.document.getText();
-                    panel.webview.html = getWebviewContent(content,context,panel);
+                    updateWebviewContent(event.document.getText(), panel);
                 }
+            });
+
+            // Clean up the listener on panel dispose
+            panel.onDidDispose(() => {
+                textChangeListener.dispose();
             });
         })
     );
 }
 
-function getWebviewContent(content: string, context:vscode.ExtensionContext, panel:vscode.WebviewPanel ): string {
+function updateWebviewContent(content: string, panel: vscode.WebviewPanel): void {
     let parsed;
     try {
         const result = renderMarkdown(content);
         parsed = result.parsed;
     } catch (error) {
-        parsed = `<p>Error rendering Markdown: ${error.message}</p>`;
+        parsed = `<p style="color:red;">Error rendering Markdown: ${error.message}</p>`;
     }
-	const myStyle = panel.webview.asWebviewUri(vscode.Uri.joinPath(
-        context.extensionUri, 'src','media', 'mathcrowd.css'));
 
+    panel.webview.html = getWebviewContent(parsed);
+}
+
+function getWebviewContent(parsedContent: string): string {
     return `
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="stylesheet" type="text/css" href="${myStyle}">
             <title>Markdown Preview</title>
         </head>
         <body>
-			<section class="mmarked article-mmarked">
-				${parsed}
-			</section>
+            <section class="mmarked article-mmarked">
+                ${parsedContent}
+            </section>
         </body>
         </html>
     `;
