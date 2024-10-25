@@ -4,7 +4,7 @@
 
 ## 🌟 Introduction
 
-The **MMarked** is a Visual Studio Code extension that provides real-time previews of Markdown files with enhanced LaTeX support using [@mathcrowd/mmarked](https://lab.mathcrowd.cn/mmarked). 
+The **MMarked** is a Visual Studio Code extension that provides real-time previews of Markdown files with enhanced LaTeX support using [@mathcrowd/mmarked](https://github.com/mathedu4all/mmarked).
 
 This extension is designed for educators, students, and anyone who needs to visualize mathematical expressions and custom Markdown syntax in their documentation.
 
@@ -36,13 +36,27 @@ To preview your Markdown document with LaTeX support:
 2. Use the command palette (`Ctrl+Shift+P`) and select **Markdown Preview with mmarked**.
 3. Make edits to your Markdown file, and see changes reflected in real-time.
 
+### Configuration Options
+
+You can customize extenstion's feature using the following options in your `.vscode/settings.json`:
+
+```json
+{
+  "mmarked": {
+    "cssUrl": "https://cdn2.mathcrowd.cn/assets/styles/mathcrowd.css",
+    "darkCssUrl": "https://cdn2.mathcrowd.cn/assets/styles/mathcrowd-dark.css",
+    "enableTex2svg": true
+  }
+}
+```
+
 ## 👥 About Mathcrowd
 
 Mathcrowd is an innovative startup founded by experienced independent developers and mathematics educators. We're on a mission to revolutionize math education in China through cutting-edge technology. Our goal is to create an engaging online community for math enthusiasts and self-learners, offering rich, interactive, and visualized learning content.
 
-🌐 MCLab Official Website: [https://lab.mathcrowd.cn](https://lab.mathcrowd.cn) 
+🌐 MCLab Official Website: [https://lab.mathcrowd.cn](https://lab.mathcrowd.cn)
 
-🌐 Our Online Math Community: [https://www.mathcrowd.cn](https://www.mathcrowd.cn) 
+🌐 Our Online Math Community: [https://www.mathcrowd.cn](https://www.mathcrowd.cn)
 
 💬 Join Our Discord: https://discord.gg/6VMUVA5Yq2
 
@@ -52,4 +66,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📞 Support
 
-For any questions or issues, please [open an issue](https://github.com/mathedu4all/mmarked-vscode-extension/issues) on our GitHub repository.
+For any questions or issues regarding the MMarked extension, please [open an issue](https://github.com/mathedu4all/mmarked-vscode-extension/issues) on our GitHub repository. 
+
+For inquiries specifically related to the @mathcrowd/mmarked library itself, please [open an issue](https://github.com/mathedu4all/mmarked/issues) on its dedicated GitHub repository.
