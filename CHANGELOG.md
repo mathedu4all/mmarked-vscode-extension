@@ -1,3 +1,12 @@
+## [0.0.5](https://github.com/mathedu4all/mmarked-vscode-extension/compare/v0.0.4...v0.0.5) (2024-10-25)
+
+
+### Bug Fixes
+
+* .vscodeignore updated. ([62850df](https://github.com/mathedu4all/mmarked-vscode-extension/commit/62850df04325b3c42e78b4f8e4d08e96eb77a98f))
+
+
+
 ## [0.0.4](https://github.com/mathedu4all/mmarked-vscode-extension/compare/v0.0.3...v0.0.4) (2024-10-25)
 
 
