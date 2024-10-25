@@ -3,6 +3,7 @@
   "displayName": "MMarked",
   "description": "An alternative to the builtin markdown previewer based on @mathcrowd/mmarked.",
   "version": "0.0.1",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -35,7 +36,27 @@
         "command": "mmarked.previewMarkdown",
         "title": "Preview Markdown with mmarked"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Markdown Preview",
+      "properties": {
+        "mmarked.cssUrl": {
+          "type": "string",
+          "default": "https://cdn2.mathcrowd.cn/assets/styles/mathcrowd.css",
+          "description": "URL for the light theme CSS"
+        },
+        "mmarked.darkCssUrl": {
+          "type": "string",
+          "default": "https://cdn2.mathcrowd.cn/assets/styles/mathcrowd-dark.css",
+          "description": "URL for the dark theme CSS"
+        },
+        "mmarked.enableTex2svg": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable tex2svg for math formulas"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
