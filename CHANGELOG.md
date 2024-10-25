@@ -1,4 +1,13 @@
-## 0.0.2 (2024-10-25)
+## [0.0.3](https://github.com/mathedu4all/mmarked-vscode-extension/compare/v0.0.2...v0.0.3) (2024-10-25)
+
+
+### Bug Fixes
+
+* icon fixed. / README.md updated. ([43399f5](https://github.com/mathedu4all/mmarked-vscode-extension/commit/43399f5a22f6e3e6e24acd8b434a9bad9541601e))
+
+
+
+## [0.0.2](https://github.com/mathedu4all/mmarked-vscode-extension/compare/38bcff299b65c4e8884f84dde14aaca62c8617ba...v0.0.2) (2024-10-25)
 
 
 ### Features
