@@ -66,6 +66,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📞 Support
 
-For any questions or issues regarding the MMarked extension, please [open an issue](https://github.com/mathedu4all/mmarked-vscode-extension/issues) on our GitHub repository. 
+For any questions or issues regarding the MMarked extension, please [open an issue](https://github.com/mathedu4all/mmarked-vscode-extension/issues) on our GitHub repository.
 
 For inquiries specifically related to the @mathcrowd/mmarked library itself, please [open an issue](https://github.com/mathedu4all/mmarked/issues) on its dedicated GitHub repository.

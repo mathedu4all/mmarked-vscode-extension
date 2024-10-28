@@ -117,7 +117,7 @@ class MarkdownPreviewPanel {
       <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${cssHost};">
+          <meta http-equiv="Content-Security-Policy" content="default-src *; style-src *;">
           <title>Markdown Preview</title>
           <link href="${cssUri}" rel="stylesheet" />
           <style>

@@ -1,3 +1,7 @@
+## [0.0.6](https://github.com/mathedu4all/mmarked-vscode-extension/compare/v0.0.5...v0.0.6) (2024-10-28)
+
+
+
 ## [0.0.5](https://github.com/mathedu4all/mmarked-vscode-extension/compare/v0.0.4...v0.0.5) (2024-10-25)
 
 
